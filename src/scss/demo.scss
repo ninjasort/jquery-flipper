@@ -8,10 +8,18 @@ body {
     color: #eee;
     background-color: #161616;
 }
+label {
+  font-size: 0.8em;
+  font-weight: 100;
+}
+input {
+  color: #000;
+}
 
 #myFlipper {
     width: 500px;
     margin: 0 auto;
+    text-align: center;
     #flipper-inside {
         background-color: #444;
         .front .front__content {
