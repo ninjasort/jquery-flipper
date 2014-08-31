@@ -95,18 +95,19 @@
             
             switch(k) {
                 case 'rotationType':
-                    if ($.type(v) == 'string') {
+                    if ($.type(v) === 'string') {
                         this.element.switchClass(this._prefix(this.options.rotationType), this._prefix(v));
                     }
                     break;
                 case 'depth':
-                    var v = depth = parseInt(v);
+                    var depth = v = parseInt(v);
                     this._setDepth(depth);
                     break;
                 case 'speed':
-                    var v = speed = parseFloat(v);
+                    var speed = v = parseFloat(v);
                     this._setSpeed(speed);
-                default: '';
+                    break;
+                default: return;
             }
             this._update(k, v);
         },
