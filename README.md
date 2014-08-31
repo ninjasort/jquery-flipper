@@ -30,13 +30,10 @@ In your web page:
 </script>
 ```
 
-## Documentation
-Getting started with jquery-flipper is easy. Simply add `<script src="//code.jquery.com/jquery.js"></script>` to your project and a reference to `<script src="jquery-flipper.min.js"></script>` and you're ready to go! You'll need to create an element that you can target
-with jquery and apply the `$('#element').flipper();` function. The html should be structured as is outlined above.
-
-- Options
+## Options
 You can also pass flipper options.
-    - rotationType [string] the type of rotation (left, right, up, down, left-slide, right-slide)
+
+	- rotationType [string] the type of rotation (left, right, up, down, left-slide, right-slide)
     - depth [number 100 - 1000] the perspective applied to the element rotation
     - speed [number 0.1 - 2.0] the speed of the rotation
 
