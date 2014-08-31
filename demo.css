@@ -1,10 +1,11 @@
 body {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   padding: 100px 0;
   line-height: 1.5;
   color: #eee;
-  background-color: #161616; }
+  background-image: url('binding_dark.png');
+  background-color: #000; }
 label {
   font-size: 0.8em;
   font-weight: 100; }
