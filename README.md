@@ -33,9 +33,11 @@ In your web page:
 ## Options
 You can also pass flipper options.
 
-	- rotationType [string] the type of rotation (left, right, up, down, left-slide, right-slide)
-    - depth [number 100 - 1000] the perspective applied to the element rotation
-    - speed [number 0.1 - 2.0] the speed of the rotation
+- rotationType [string] the type of rotation (left, right, up, down, left-slide, right-slide)
+
+- depth [number 100 - 1000] the perspective applied to the element rotation
+
+- speed [number 0.1 - 2.0] the speed of the rotation
 
 ## Examples
 View the demo [here](http://cameronjroe.github.io/jquery-flipper) or in the demo directory.
