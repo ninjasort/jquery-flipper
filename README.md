@@ -1,4 +1,4 @@
-# Flipper
+# jQuery Flipper
 
 A simple way to add a CSS3 flip effect to your content.
 
@@ -12,7 +12,7 @@ In your web page:
 
 ```html
 <script src="//code.jquery.com/jquery.js"></script>
-<script src="../dist/jquery.flipper.min.js"></script>
+<script src="jquery.flipper.min.js"></script>
 <script>
     $('#myFlipper').flipper({
         rotationType: 'left-slide',
@@ -26,4 +26,4 @@ In your web page:
 _(Coming soon)_
 
 ## Examples
-View the [demo](http://github.com/cameronjroe/jquery-flipper/master/demo)
+View the demo [here](http://cameronjroe.github.io/jquery-flipper) or in the demo directory.
