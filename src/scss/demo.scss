@@ -1,0 +1,35 @@
+@import "bourbon";
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    padding: 100px 0;
+    line-height: 1.5;
+    color: #eee;
+    background-color: #161616;
+}
+
+#myFlipper {
+    width: 500px;
+    margin: 0 auto;
+    #flipper-inside {
+        background-color: #444;
+        .front .front__content {
+            *:not(img) {
+                padding: 2em 1em;
+            }
+        }
+        .back .back__content {
+            padding: 2em;
+            width: 100%;
+            a {
+                display: inline-block;
+                padding: 1em;
+                color: #6699ff;
+                &:hover {
+                    color: darken(#6699ff, 10%);
+                }
+            }
+        }
+    }
+}

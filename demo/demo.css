@@ -1,0 +1,24 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
+  padding: 100px 0;
+  line-height: 1.5;
+  color: #eee;
+  background-color: #161616; }
+
+#myFlipper {
+  width: 500px;
+  margin: 0 auto; }
+  #myFlipper #flipper-inside {
+    background-color: #444; }
+    #myFlipper #flipper-inside .front .front__content *:not(img) {
+      padding: 2em 1em; }
+    #myFlipper #flipper-inside .back .back__content {
+      padding: 2em;
+      width: 100%; }
+      #myFlipper #flipper-inside .back .back__content a {
+        display: inline-block;
+        padding: 1em;
+        color: #6699ff; }
+        #myFlipper #flipper-inside .back .back__content a:hover {
+          color: #337aff; }

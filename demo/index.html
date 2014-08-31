@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flipper Demo</title>
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                
+                <section id="myFlipper">
+                    <div id="flipper-inside">
+                        <div class="front">
+                            <section class="front__content">
+                                <img width="100%" src="http://picjumbo.com/wp-content/uploads/HNCK0129-1300x866.jpg">
+                            </section>
+                        </div>
+                        <div class="back">
+                            <section class="back__content">
+                                <p>Efficient end hunger best practices emergent opportunity eradicate process vaccines. Harness disruption approach billionaire philanthropy Jane Jacobs research. Community health workers legal aid, human potential committed, connect conflict resolution legitimize reproductive rights activist.</p>
+                                <a href="http://facebook.com">Share on Facebook</a>
+                                <a href="http://twitter.com">Share on Twitter</a>
+                            </section>
+                        </div>
+                    </figure>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="../dist/jquery.flipper.min.js"></script>
+    <script>
+        $('#myFlipper').flipper({
+            rotationType: 'left-slide',
+            depth: 1000,
+            speed: 0.2
+        });
+    </script>
+</body>
+</html>
