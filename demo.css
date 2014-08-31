@@ -16,9 +16,9 @@ body {
     #myFlipper #flipper-inside .back .back__content {
       padding: 2em;
       width: 100%; }
-      #myFlipper #flipper-inside .back .back__content a {
+      #myFlipper #flipper-inside .back a {
         display: inline-block;
-        padding: 1em;
+        padding: 1em 0;
         color: #6699ff; }
-        #myFlipper #flipper-inside .back .back__content a:hover {
+        #myFlipper #flipper-inside .back a:hover {
           color: #337aff; }
