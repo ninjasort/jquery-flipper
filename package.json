@@ -2,7 +2,7 @@
   "name": "flipper",
   "title": "Flipper",
   "description": "A simple way to add a CSS3 flip effect to your content.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/cameronjroe/jquery-flipper",
   "author": {
     "name": "Cameron J Roe"
