@@ -8,6 +8,8 @@ body {
 label {
   font-size: 0.8em;
   font-weight: 100; }
+input {
+  color: #000; }
 
 #myFlipper {
   width: 500px;
