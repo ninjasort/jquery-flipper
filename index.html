@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>jQuery Flipper Demo</title>
     <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="flipper.min.css">
     <link rel="stylesheet" href="demo.css">
 </head>
 <body>
@@ -11,10 +12,21 @@
     <div class="container">
         <div class="row">
             
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <h2>jQuery Flipper</h2>
                 <p>Demo</p>
-                <br>
+                <label for="type-selector">Rotation Type:</label>
+                <select name="type" id="type-selector">
+                    <option value="left" selected>left</option>
+                    <option value="right">right</option>
+                    <option value="up">up</option>
+                    <option value="down">down</option>
+                    <option value="left-slide">left-slide</option>
+                    <option value="right-slide">right-slide</option>
+                </select>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <section id="myFlipper">
                     <div id="flipper-inside">
                         <div class="front">
@@ -32,18 +44,30 @@
                         </div>
                     </figure>
                 </section>
-
             </div>
         </div>
     </div>
 
     <script src="//code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script src="jquery.flipper.js"></script>
     <script>
-        $('#myFlipper').flipper({
-            rotationType: 'left-slide',
-            depth: 1000,
-            speed: 0.2
+    $('#myFlipper').flipper({
+        rotationType: 'left-slide',
+        depth: 1000,
+        speed: 0.2
+    });
+    </script>
+    <script>
+        $('select[name=type]').on('change', function () {
+            var type = $(this).val();
+            $('#myFlipper').flipper('destroy');
+            $('#myFlipper').flipper({
+                rotationType: type,
+                depth: 1000,
+                speed: 0.2
+            });
+            $('#type').text(type);
         });
     </script>
 </body>
