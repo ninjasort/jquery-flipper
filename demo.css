@@ -11,7 +11,14 @@ label {
   font-weight: 100; }
 input {
   color: #000; }
-
+span {
+  font-size: 12px;
+  letter-spacing: 1px; }
+a {
+  color: #ff6666; }
+a:hover {
+  color: #ff6666;
+  text-decoration: underline; }
 #myFlipper {
   width: 500px;
   margin: 0 auto; 
@@ -25,7 +32,4 @@ input {
       width: 100%; }
       #myFlipper #flipper-inside .back a {
         display: inline-block;
-        padding: 1em 0;
-        color: #6699ff; }
-        #myFlipper #flipper-inside .back a:hover {
-          color: #337aff; }
+        padding: 0.5em 0; }
