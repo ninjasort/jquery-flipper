@@ -3,7 +3,7 @@
 A simple way to add a CSS3 flip effect to your content.
 
 ## Getting Started
-Download the [production version](https://raw.github.com/cameronjroe/jquery-flipper/master/dist/flipper.min.js) or the [development version](https://raw.github.com/cameronjroe/jquery-flipper/master/dist/flipper.js).
+Download the [production version](https://github.com/cameronjroe/jquery-flipper/blob/master/dist/jquery.flipper.min.js) or the [development version](https://github.com/cameronjroe/jquery-flipper/blob/master/dist/jquery.flipper.js).
 
 In your web page:
 
