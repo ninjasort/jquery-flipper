@@ -13,9 +13,9 @@ In your web page:
 <script src=“//code.jquery.com/ui/1.11.2/jquery-ui.min.js”></script>
 <script src="jquery.flipper.min.js"></script>
 <section id="myFlipper">
-		<!-- There should be two elements inside the flipper -->
-		<section class="front"></section>
-		<section class="back"></section>
+	<!-- There should be two elements inside the flipper -->
+	<section class="front"></section>
+	<section class="back"></section>
 </section>
 <script>
     $('#myFlipper').flipper({
