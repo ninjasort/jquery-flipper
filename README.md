@@ -9,6 +9,7 @@ In your web page:
 
 ```html
 <script src="//code.jquery.com/jquery.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 <script src="jquery.flipper.min.js"></script>
 <section id="myFlipper">
     <!-- You must add the id "flipper-inside" inside your flipper container. -->
