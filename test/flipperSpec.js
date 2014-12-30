@@ -1,15 +1,24 @@
 describe('Flipper', function () {
-  var flipper;
-  
-  beforeEach(function () {
-    flipper = 'flipper';
-  });
+    
+    jasmine.getFixtures().fixturesPath = 'test/fixtures';
+    var fixture;
 
+    beforeEach(function () {
+        loadFixtures('fixture.html');
+        fixture = $('#myFlipper');
+        fixture.flipper();
+    });
 
-  it('should be defined', function () {
+    afterEach(function() {
+        fixture.remove();
+    });
 
-    expect(flipper).toBeDefined();
+    it('should be defined', function () {
+        expect(fixture).toExist();
+    });
 
-  });
+    it("should have the correct class applied", function() {
+        expect(fixture.hasClass('flipper-container')).toBeTruthy();
+    });
 
 });
