@@ -1,0 +1,22 @@
+{
+  "name": "jquery-flipper",
+  "version": "1.0.0",
+  "homepage": "https://github.com/cameronjroe/jquery-flipper",
+  "authors": [
+    "Cameron J Roe <cameronjroe@gmail.com>"
+  ],
+  "description": "A simple way to add a CSS3 flip effect to your content.",
+  "main": "dist/jquery.flipper.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "~1.11.2"
+  }
+}
