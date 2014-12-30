@@ -8,14 +8,14 @@ module.exports = {
   },
   src: {
     files: '<%= jshint.src.src %>',
-    tasks: ['jshint:src', 'karma']
+    tasks: ['jshint:src', 'jasmine']
   },
   sass: {
     files: 'src/scss/**/*.scss',
     tasks: ['sass']
   },
   test: {
-    files: '<%= jshint.test.src %>',
-    tasks: ['jshint:test', 'karma']
+    files: 'test/*Spec.js',
+    tasks: ['jasmine']
   }
 };

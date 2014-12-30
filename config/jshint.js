@@ -7,8 +7,5 @@ module.exports = {
   },
   src: {
     src: ['src/**/*.js']
-  },
-  test: {
-    src: ['test/**/*Spec.js']
   }
 };
