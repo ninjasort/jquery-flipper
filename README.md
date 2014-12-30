@@ -8,15 +8,14 @@ Download the [production version](https://raw.github.com/cameronjroe/jquery-flip
 In your web page:
 
 ```html
+<link rel=“stylesheet” href=“jquery.flipper.min.css”>
 <script src="//code.jquery.com/jquery.js"></script>
+<script src=“//code.jquery.com/ui/1.11.2/jquery-ui.min.js”></script>
 <script src="jquery.flipper.min.js"></script>
 <section id="myFlipper">
-    <!-- You must add the id "flipper-inside" inside your flipper container. -->
-    <div id="flipper-inside">
-        <!-- There should be two elements in the #flipper-inside. They can have any class or id you choose. -->
-        <section class="front"></section>
-        <section class="back"></section>
-    </div>
+		<!-- There should be two elements inside the flipper -->
+		<section class="front"></section>
+		<section class="back"></section>
 </section>
 <script>
     $('#myFlipper').flipper({
@@ -32,9 +31,22 @@ You can also pass flipper options.
 
 - rotationType [string] the type of rotation (left, right, up, down, left-slide, right-slide)
 
+- event [string, object] this event to bind to
+	- “hover”
+	- “click”
+	- {type: “keydown”, keyCode: 13}
+
 - depth [number] the perspective applied to the element rotation (100 - 1000)
 
 - speed [number] the speed of the rotation (0.1 - 2.0)
+
+**FOUC NOTE**
+You can add a `data-flipper` attribute to your element to stop a FOUC from appearing due to style adjustments in the plugin.
+```
+<section id=“myFlipper” data-flipper>
+	…
+</section>
+```
 
 ## Examples
 View the demo [here](http://cameronjroe.github.io/jquery-flipper) or in the demo directory.
