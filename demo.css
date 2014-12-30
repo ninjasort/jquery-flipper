@@ -1,35 +1,45 @@
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   padding: 100px 0;
   line-height: 1.5;
   color: #eee;
-  background-image: url('binding_dark.png');
-  background-color: #000; }
+  background-color: #161616; }
+
 label {
   font-size: 0.8em;
   font-weight: 100; }
+
 input {
   color: #000; }
-span {
-  font-size: 12px;
-  letter-spacing: 1px; }
+
+p {
+  margin-bottom: 1.5em; }
+
 a {
-  color: #ff6666; }
-a:hover {
-  color: #ff6666;
-  text-decoration: underline; }
+  display: inline-block;
+  color: #6699ff; }
+  a:hover {
+    color: #337aff; }
+
+select[name="keydown"] {
+  display: none; }
+
 #myFlipper {
   width: 500px;
-  margin: 0 auto; 
+  margin: 0 auto;
   text-align: center; }
-  #myFlipper #flipper-inside {
+  #myFlipper .flipper-element {
     background-color: #444; }
-    #myFlipper #flipper-inside .front .front__content *:not(img) {
+    #myFlipper .flipper-element .front .front__content *:not(img) {
       padding: 2em 1em; }
-    #myFlipper #flipper-inside .back .back__content {
+    #myFlipper .flipper-element .back .back__content {
+      margin-top: 1.5em;
       padding: 2em;
       width: 100%; }
-      #myFlipper #flipper-inside .back a {
-        display: inline-block;
-        padding: 0.5em 0; }
+
+@media (max-width: 480px) {
+  #myFlipper {
+    width: 100%; }
+    #myFlipper .back__content {
+      font-size: 80%; } }
