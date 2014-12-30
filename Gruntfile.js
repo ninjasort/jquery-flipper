@@ -12,9 +12,10 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   grunt.registerTask('dev', [
+    'connect',
     'sass',
     'jshint',
-    // 'karma',
+    'jasmine',
     'watch'
   ]);
 
@@ -23,8 +24,6 @@ module.exports = function(grunt) {
     'concat',
     'sass:flipper',
     'jshint',
-    'karma',
     'uglify'
   ]);
-
 };
