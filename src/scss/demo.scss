@@ -1,7 +1,7 @@
 @import "bourbon";
 
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     padding: 100px 0;
     line-height: 1.5;
@@ -15,12 +15,26 @@ label {
 input {
   color: #000;
 }
+p {
+    margin-bottom: 1.5em;
+}
+a {
+    display: inline-block;
+    color: #6699ff;
+    &:hover {
+        color: darken(#6699ff, 10%);
+    }
+}
+
+select[name="keydown"] {
+    display: none;
+}
 
 #myFlipper {
     width: 500px;
     margin: 0 auto;
     text-align: center;
-    #flipper-inside {
+    .flipper-element {
         background-color: #444;
         .front .front__content {
             *:not(img) {
@@ -28,16 +42,18 @@ input {
             }
         }
         .back .back__content {
+            margin-top: 1.5em;
             padding: 2em;
             width: 100%;
-            a {
-                display: inline-block;
-                padding: 1em;
-                color: #6699ff;
-                &:hover {
-                    color: darken(#6699ff, 10%);
-                }
-            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #myFlipper {
+        width: 100%;
+        .back__content {
+            font-size: 80%;
         }
     }
 }

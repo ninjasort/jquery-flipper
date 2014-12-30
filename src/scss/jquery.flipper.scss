@@ -1,0 +1,78 @@
+@import "bourbon";
+/*
+    jQuery Flipper Demo
+    Author: @cameronjroe
+    Github: https://github.com/cameronjroe/jquery-flipper.git
+*/
+
+$flipper-el: '.flipper-element';
+
+*[data-flipper] {
+    display: none;
+}
+
+.flipper-container {
+    position: relative;
+    #{$flipper-el} {
+        position: relative;
+        display: inline-block;
+        @include transform-style(preserve-3d);
+        ._flipper-front {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            @include backface-visibility(hidden);
+        }
+        ._flipper-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            @include backface-visibility(hidden);
+            @include transform(rotate3d(0, 1, 0, 180deg) translateZ(1px));
+        }
+    }
+    ._flipper-right {
+        &.flipper-flipped {
+            @include transform(rotate3d(0, 1, 0, -180deg));
+        }
+    }
+    ._flipper-left {
+        &.flipper-flipped {
+            @include transform(rotate3d(0, 1, 0, 180deg));
+        }   
+    }
+    ._flipper-right-slide {
+        @include transform-origin(center right);
+        &.flipper-flipped {
+            @include transform(translateX(-100%) rotate3d(0, 1, 0, -180deg));
+        }
+    }
+    ._flipper-left-slide {
+        @include transform-origin(center left);
+        &.flipper-flipped {
+            @include transform(translateX(100%) rotate3d(0, 1, 0, 180deg));
+        }
+    }
+    ._flipper-up {
+        @include transform-origin(center center);
+        & > ._flipper-back {
+            @include transform(rotate3d(1, 0, 0, 180deg) translateZ(1px));
+        }
+        &.flipper-flipped {
+            @include transform(rotate3d(1, 0, 0, 180deg));
+        }
+    }
+    ._flipper-down {
+        @include transform-origin(center center);
+        & > ._flipper-back {
+            @include transform(rotate3d(1, 0, 0, 180deg) translateZ(1px));
+        }
+        &.flipper-flipped {
+            @include transform(rotate3d(1, 0, 0, -180deg));
+        }
+    }
+}
