@@ -13,8 +13,8 @@ module.exports = {
             outputStyle: 'compressed'
         },
         files: {
-	    'src/css/jquery.flipper.min.css': 'src/scss/jquery.flipper.scss',
-	    'dist/jquery.flipper.min.css': 'src/scss/jquery.flipper.scss'
+            'src/css/jquery.flipper.min.css': 'src/scss/jquery.flipper.scss',
+            'dist/jquery.flipper.min.css': 'src/scss/jquery.flipper.scss'
         }
     }
 };

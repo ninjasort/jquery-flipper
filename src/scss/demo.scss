@@ -22,7 +22,7 @@ a {
     display: inline-block;
     color: #6699ff;
     &:hover {
-	color: darken(#6699ff, 10%);
+        color: darken(#6699ff, 10%);
     }
 }
 
@@ -42,18 +42,18 @@ select[name="keydown"] {
             }
         }
         .back .back__content {
-	    margin-top: 1.5em;
+            margin-top: 1.5em;
             padding: 2em;
             width: 100%;
-	}
+        }
     }
 }
 
 @media (max-width: 480px) {
     #myFlipper {
-	width: 100%;
-	.back__content {
-	    font-size: 80%;
+        width: 100%;
+        .back__content {
+            font-size: 80%;
         }
     }
 }
