@@ -8,25 +8,30 @@ Download the [production version](https://raw.githubusercontent.com/cameronjroe/
 In your web page:
 
 ```html
-<link rel="stylesheet" href="bower_components/jquery-flipper/dist/jquery.flipper.min.css">
+<html>
+<head>
+  <link rel="stylesheet" href="bower_components/jquery-flipper/dist/jquery.flipper.min.css">
+</head>
+<body>
+  <section id="myFlipper" data-flipper>
+    <!-- **FOUC NOTE** You can add a `data-flipper` attribute to your element to stop a FOUC from appearing due to style adjustments in the plugin. -->
+    <!-- There should be two elements inside the flipper -->
+    <section class="front"></section>
+    <section class="back"></section>
+  </section>
 
-<section id="myFlipper" data-flipper>
-  <!-- **FOUC NOTE** You can add a `data-flipper` attribute to your element to stop a FOUC from appearing due to style adjustments in the plugin. -->
-  <!-- There should be two elements inside the flipper -->
-  <section class="front"></section>
-  <section class="back"></section>
-</section>
-
-<script src="//code.jquery.com/jquery.js"></script>
-<script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
-<script src="bower_components/jquery-flipper/dist/jquery.flipper.min.js"></script>
-<script>
-  $('#myFlipper').flipper({
-    rotationType: 'left-slide',
-    depth: 1000,
-    speed: 0.2
-  });
-</script>
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+  <script src="bower_components/jquery-flipper/dist/jquery.flipper.min.js"></script>
+  <script>
+    $('#myFlipper').flipper({
+      rotationType: 'left-slide',
+      depth: 1000,
+      speed: 0.2
+    });
+  </script>
+</body>
+</html>
 ```
 
 ## Options
