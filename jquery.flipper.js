@@ -1,9 +1,3 @@
-/**
- * jquery-flipper
- * Author: @cameronjroe
- * A simple way to add a CSS3 flip effect to your content.
- * Licensed under the MIT license
- */
 ;(function($, window, document, undefined) {
 
     $.widget('cjroe.flipper', {
