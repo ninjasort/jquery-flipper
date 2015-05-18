@@ -10,11 +10,11 @@ module.exports = {
     },
     flipper: {
         options: {
-            outputStyle: 'compressed'
+            outputStyle: 'expanded'
         },
         files: {
-            'src/css/jquery.flipper.min.css': 'src/scss/jquery.flipper.scss',
-            'dist/jquery.flipper.min.css': 'src/scss/jquery.flipper.scss'
+            'src/css/jquery.flipper.css': 'src/scss/jquery.flipper.scss',
+            'dist/jquery.flipper.css': 'src/scss/jquery.flipper.scss'
         }
     }
 };

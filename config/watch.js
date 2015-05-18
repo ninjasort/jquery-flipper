@@ -12,7 +12,7 @@ module.exports = {
   },
   sass: {
     files: 'src/scss/**/*.scss',
-    tasks: ['sass']
+    tasks: ['sass', 'autoprefixer', 'cssmin']
   },
   test: {
     files: 'test/*.spec.js',

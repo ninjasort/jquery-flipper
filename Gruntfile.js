@@ -14,6 +14,8 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', [
     'connect',
     'sass',
+    'autoprefixer',
+    'cssmin',
     'jshint',
     'jasmine',
     'watch'
@@ -23,6 +25,9 @@ module.exports = function(grunt) {
     'clean',
     'concat',
     'sass:flipper',
+    'sass',
+    'autoprefixer',
+    'cssmin',
     'jshint',
     'uglify'
   ]);
