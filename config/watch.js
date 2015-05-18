@@ -15,7 +15,7 @@ module.exports = {
     tasks: ['sass']
   },
   test: {
-    files: 'test/*Spec.js',
+    files: 'test/*.spec.js',
     tasks: ['jasmine']
   }
 };

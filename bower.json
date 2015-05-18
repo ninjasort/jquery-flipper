@@ -17,6 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-ui": "~1.11.2"
+    "jquery-ui": "~1.11.4"
+  },
+  "devDependencies": {
+    "jasmine-jquery": "~2.1.0"
   }
 }

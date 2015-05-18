@@ -4,9 +4,8 @@ describe('Flipper', function () {
     var fixture;
 
     beforeEach(function () {
-        loadFixtures('fixture.html');
+        loadFixtures('flipper.html');
         fixture = $('#myFlipper');
-        fixture.flipper();
     });
 
     afterEach(function() {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Flipper Test Suite</title>
+      <link rel="stylesheet" href="../../src/css/jquery.flipper.min.css">
+      <style>
+        #myFlipper {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+        }
+        #myFlipper .front {
+          background-color: #444;
+          color: #fff;
+        }
+        #myFlipper .back {
+          background-color: #CC0000;
+          color: #fff;
+        }
+      </style>
+  </head>
+
+  <body>
+      <!-- Fixture -->
+      <section id="myFlipper" data-flipper>
+          <div class="front">
+            Wow!
+          </div>
+          <div class="back">
+            Cool!
+          </div>
+      </section>
+
+      <script src="../../bower_components/jquery/dist/jquery.js"></script>
+      <script src="../../bower_components/jquery-ui/jquery-ui.js"></script>
+      <script src="../../src/jquery.flipper.js"></script>
+      <script>
+          $('#myFlipper').flipper();
+      </script>
+  </body>
+</html>
