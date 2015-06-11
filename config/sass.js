@@ -14,7 +14,7 @@ module.exports = {
         },
         files: {
             'src/css/jquery.flipper.css': 'src/scss/jquery.flipper.scss',
-            'dist/jquery.flipper.css': 'src/scss/jquery.flipper.scss'
+            'dist/jquery.flipper.css': 'src/scss/jquery.flipper.scss',
         }
     }
 };
