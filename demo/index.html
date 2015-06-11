@@ -14,44 +14,46 @@
     <div class="container">
         <div class="row">
             
-            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-md-3">
-                <h1>jQuery Flipper</h1>
-                <h3>CSS3 card flip effect.</h3>
-                <hr>
-                <div class="form-group">
-                    <label for="type-selector">Rotation Type:</label>
-                    <select name="type" id="type-selector">
-                        <option value="left" selected>left</option>
-                        <option value="right">right</option>
-                        <option value="up">up</option>
-                        <option value="down">down</option>
-                        <option value="left-slide">left-slide</option>
-                        <option value="right-slide">right-slide</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="event">Event</label>
-                    <select name="event">
-                        <option value="hover">hover</option>
-                        <option value="click">click</option>
-                        <option value="keydown">keydown</option>
-                    </select>
-                    <select name="keydown">
-                        <option value="enter">enter</option>
-                        <option value="space">space</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="depth">Depth: (100 - 2000) <span id="depth-amount">1000</span></label>
-                    <input type="range" name="depth" value="1000" min="100" max="2000">
-                </div>
-                <div class="form-group">
-                    <label for="speed">Speed: 0.1 - 2.0 <span id="speed-amount">0.5</span></label>
-                    <input type="range" name="speed" min="0.1" max="2" value="0.5" step="0.1">
-                </div>
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">
+                <section class="controls">
+                    <h1>jQuery Flipper</h1>
+                    <h3>CSS3 card flip effect.</h3>
+                    <hr>
+                    <div class="form-group">
+                        <label for="type-selector">Rotation Type:</label>
+                        <select name="type" id="type-selector">
+                            <option value="left" selected>left</option>
+                            <option value="right">right</option>
+                            <option value="up">up</option>
+                            <option value="down">down</option>
+                            <option value="left-slide">left-slide</option>
+                            <option value="right-slide">right-slide</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event">Event:</label>
+                        <select name="event">
+                            <option value="hover">hover</option>
+                            <option value="click">click</option>
+                            <option value="keydown">keydown</option>
+                        </select>
+                        <select name="keydown">
+                            <option value="enter">enter</option>
+                            <option value="space">space</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="depth">Depth: (100 - 2000) <span id="depth-amount">1000</span></label>
+                        <input type="range" name="depth" value="1000" min="100" max="2000">
+                    </div>
+                    <div class="form-group">
+                        <label for="speed">Speed: 0.1 - 2.0 <span id="speed-amount">0.5</span></label>
+                        <input type="range" name="speed" min="0.1" max="2" value="0.5" step="0.1">
+                    </div>
+                </section>
             </div>
 
-            <div class="col-xs-12 col-sm-10 col-md-4 col-md-offset-1">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1">
                 <section id="myFlipper" data-flipper>
                     <div class="front">
                         <section class="front__content">
