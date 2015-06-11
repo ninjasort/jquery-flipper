@@ -3,8 +3,16 @@ body {
   font-size: 18px;
   padding: 100px 0;
   line-height: 1.5;
-  color: #eee;
-  background-color: #161616; }
+  color: #444;
+  background-color: #eee; }
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 0.5em; }
+
+h3 {
+  color: #333;
+  font-size: 1em; }
 
 label {
   font-size: 0.8em;
@@ -22,6 +30,9 @@ a {
   a:hover {
     color: #337aff; }
 
+select {
+  color: #000; }
+
 select[name="keydown"] {
   display: none; }
 
@@ -36,7 +47,8 @@ select[name="keydown"] {
     #myFlipper .flipper-element .back .back__content {
       margin-top: 1.5em;
       padding: 2em;
-      width: 100%; }
+      width: 100%;
+      color: #eee; }
 
 @media (max-width: 480px) {
   #myFlipper {

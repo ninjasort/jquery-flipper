@@ -5,8 +5,16 @@ body {
     font-size: 18px;
     padding: 100px 0;
     line-height: 1.5;
-    color: #eee;
-    background-color: #161616;
+    color: #444;
+    background-color: #eee;
+}
+h1 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+h3 {
+    color: #333;
+    font-size: 1em;
 }
 label {
   font-size: 0.8em;
@@ -25,7 +33,9 @@ a {
         color: darken(#6699ff, 10%);
     }
 }
-
+select {
+    color: #000;
+}
 select[name="keydown"] {
     display: none;
 }
@@ -45,6 +55,7 @@ select[name="keydown"] {
             margin-top: 1.5em;
             padding: 2em;
             width: 100%;
+            color: #eee;
         }
     }
 }
