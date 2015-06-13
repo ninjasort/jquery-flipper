@@ -7,6 +7,9 @@
   "author": {
     "name": "Cameron J Roe"
   },
+  "scripts": {
+    "dev": "grunt dev"  
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/cameronjroe/jquery-flipper.git"
