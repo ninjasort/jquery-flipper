@@ -3,3 +3,4 @@ bower_components/
 .grunt/
 _SpecRunner.html
 src/lib
+src/scss
