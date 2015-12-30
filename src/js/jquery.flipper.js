@@ -5,7 +5,7 @@
  * Licensed under the MIT license
  */
 import $ from 'jquery';
-import '../scss/jquery.flipper.scss';
+import styles from './styles';
 
 $.widget('cjroe.flipper', {
 
@@ -21,7 +21,7 @@ $.widget('cjroe.flipper', {
     eventListener: 'hover'
   },
 
-  _prefix: function(className) {
+  _prefix(className) {
     return [this.options._classPrefix, className].join('-');
   },
 
@@ -44,7 +44,11 @@ $.widget('cjroe.flipper', {
    *   </div>
    * </section>
    */
-  _create: function() {
+  _create() {
+
+    this.element.css(styles.container);
+    this.$el = $('<div class="jqf-el"></div>').css(styles.el);
+    this.flipped = false;
 
     this._defaults = this.options;
 
@@ -59,15 +63,15 @@ $.widget('cjroe.flipper', {
       .map((i, el) => {
         if (i === 0) {
           this.front = $(el).addClass(this._prefix('front'));
+          this.front.css(styles.front);
         } else if (i === 1) {
           this.back = $(el).addClass(this._prefix('back'));
+          this.back.css(styles.back);
         }
         return el;
       })
-      .wrapAll('<div class="jqf-el"></div>');
+      .wrapAll(this.$el);
 
-    // cache flipper element
-    this.$el = this.element.find('.jqf');
     this.element.show();
 
     this._setOption('disabled', this.options.disabled);
@@ -77,7 +81,7 @@ $.widget('cjroe.flipper', {
     this._bindEvents();
   },
 
-  _setSpeed: function(speed) {
+  _setSpeed(speed) {
     if ($.type(this.options.speed) === 'number') {
       var _speed = parseFloat(this.options.speed);
       if (speed) {
@@ -89,15 +93,13 @@ $.widget('cjroe.flipper', {
           _speed = speed;
         }
       }
-      this.$el.css({
-        transition: 'all ' + _speed + 's ease'
-      });
+      $('.jqf-el').css('transition', 'all ' + _speed + 's ease');
     } else {
       throw new Error(this.options.speed + ' must be typeof Number');
     }
   },
 
-  _setDepth: function(v) {
+  _setDepth(v) {
     if ($.type(this.options.depth) === 'number') {
       var depth = parseInt(this.options.depth || v);
       if (depth > 2000) {
@@ -114,7 +116,7 @@ $.widget('cjroe.flipper', {
     }
   },
 
-  _setRotation: function(v) {
+  _setRotation(v) {
     var $el = this.$el;
     if ($el.hasClass(this._prefix(this.options.rotationType))) {
       $el.switchClass(this._prefix(this.options.rotationType), this._prefix(v));
@@ -123,7 +125,7 @@ $.widget('cjroe.flipper', {
     }
   },
 
-  _setOption: function(k, v) {
+  _setOption(k, v) {
 
     switch (k) {
       case 'rotationType':
@@ -146,11 +148,23 @@ $.widget('cjroe.flipper', {
     this._update(k, v);
   },
 
-  toggleFlip: function(e) {
-    this.$el.toggleClass('flipper-flipped');
+  toggleFlip(e) {
+    if (this.flipped) {
+      $('.jqf-el').css(styles.default);
+    } else {
+      $('.jqf-el').css(styles.left.flipper);
+    }
+    this.flipped = !this.flipped;
   },
 
-  _bindEvents: function(events) {
+  _handleAction(e) {
+    if (e.keyCode === this.options.eventListener.keyCode) {
+      this.toggleFlip();
+      e.stopImmediatePropagation();
+    }
+  },
+
+  _bindEvents(events) {
     if (events) {
       this.element.off();
       this.options.eventListener = events;
@@ -161,12 +175,7 @@ $.widget('cjroe.flipper', {
 
     if ($.isPlainObject(this.options.eventListener)) {
       var self = this;
-      $(window).on(this.options.eventListener.type, function(e) {
-        if (e.keyCode === self.options.eventListener.keyCode) {
-          self.toggleFlip();
-          e.stopImmediatePropagation();
-        }
-      });
+      $(window).on(this.options.eventListener.type, this._handleAction.bind(this));
     } else if (this.options.eventListener.match(/click|touch/i)) {
       this.element.on(eStart, this.toggleFlip.bind(this));
     } else if (this.options.eventListener.match(/hover/i)) {
@@ -174,11 +183,11 @@ $.widget('cjroe.flipper', {
     } else {}
   },
 
-  _update: function(k, v) {
+  _update(k, v) {
     this.options[k] = v;
   },
 
-  _destroy: function() {
+  _destroy() {
     this.element.removeClass('container').attr('style', '');
     this.$el.attr('style', '').unwrap();
     this.front.removeClass(this._prefix('front')).attr('style', '');

@@ -28,6 +28,10 @@ export default {
   plugins: [
     new ExtractTextPlugin('jquery.flipper.css')
   ],
+  resolve: {
+    root: ['src'],
+    extensions: ['', '.js', '.scss']
+  },
   externals: {
     'jquery': 'jQuery'
   }
