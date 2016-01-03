@@ -45,11 +45,11 @@ select[name="keydown"] {
   width: 500px;
   margin: 0 auto;
   text-align: center; }
-  #myFlipper .flipper-element {
+  #myFlipper .jqf-el {
     background-color: #444; }
-    #myFlipper .flipper-element .front .front__content *:not(img) {
+    #myFlipper .jqf-el .jqf-front .front__content *:not(img) {
       padding: 2em 1em; }
-    #myFlipper .flipper-element .back .back__content {
+    #myFlipper .jqf-el .jqf-back .back__content {
       margin-top: 1.5em;
       padding: 2em;
       width: 100%;
