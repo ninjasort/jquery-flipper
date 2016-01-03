@@ -77,7 +77,7 @@ $.widget('cjroe.flipper', {
     this._setOption('disabled', this.options.disabled);
     this._setDepth();
     this._setSpeed();
-    this._setRotation();
+    this._setRotation(this._defaults.rotationType);
     this._bindEvents();
   },
 
@@ -118,11 +118,32 @@ $.widget('cjroe.flipper', {
 
   _setRotation(v) {
     var $el = this.$el;
-    if ($el.hasClass(this._prefix(this.options.rotationType))) {
-      $el.switchClass(this._prefix(this.options.rotationType), this._prefix(v));
-    } else {
-      $el.addClass(this._prefix(this.options.rotationType), this._prefix(v));
+    // left, right, up, down, left-slide, right-slide
+    switch(v) {
+      case 'left':
+        this.selectedFlip = styles.left;
+        break;
+      case 'right':
+        this.selectedFlip = styles.right;
+        break;
+      case 'up':
+        this.selectedFlip = styles.up;
+        break;
+      case 'down':
+        this.selectedFlip = styles.down;
+        break;
+      case 'left-slide':
+        this.selectedFlip = styles.leftSlide;
+        break;
+      case 'right-slide':
+        this.selectedFlip = styles.rightSlide;
+        break;
     }
+    // if ($el.hasClass(this._prefix(this.options.rotationType))) {
+    //   $el.switchClass(this._prefix(this.options.rotationType), this._prefix(v));
+    // } else {
+    //   $el.addClass(this._prefix(this.options.rotationType), this._prefix(v));
+    // }
   },
 
   _setOption(k, v) {
@@ -152,7 +173,19 @@ $.widget('cjroe.flipper', {
     if (this.flipped) {
       $('.jqf-el').css(styles.default);
     } else {
-      $('.jqf-el').css(styles.left.flipper);
+      // set the parent styles
+      if (this.selectedFlip.parent) {
+        $('.jqf-el').parent().css(this.selectedFlip.parent);
+      }
+      // set other element styles k, v
+      if (this.selectedFlip.finds) {
+        for (var f in this.selectedFlip.finds) {
+          $('.jqf-el').find(f).css(this.selectedFlip.finds[f]);
+        }
+      }
+      // set the element's style
+      $('.jqf-el').css(this.selectedFlip.flipper);
+      console.log($('.jqf-el').get(0));
     }
     this.flipped = !this.flipped;
   },

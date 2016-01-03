@@ -47,30 +47,38 @@ export default {
     }
   },
   rightSlide: {
-    'transform-origin': 'center right',
     flipper: {
+      'transform-origin': 'center right',
       'transform': 'translateX(-100%) rotate3d(0, 1, 0, -180deg)'
     }
   },
   leftSlide: {
-    'transform-origin': 'center left',
     flipper: {
+      'transform-origin': 'center left',
       'transform': 'translateX(100%) rotate3d(0, 1, 0, 180deg)'
     }
   },
   up: {
-    'transform-origin': 'center center',
-    '& > ._flipper-back': {
-      'transform': 'rotate3d(1, 0, 0, 180deg) translateZ(1px)'
+    parent: {
+      'transform-origin': 'center center'
+    },
+    finds: {
+      '> .jqf-back': {
+        'transform': 'rotate3d(1, 0, 0, 180deg) translateZ(1px)'
+      }
     },
     flipper: {
       'transform': 'rotate3d(1, 0, 0, 180deg)'
     }
   },
   down: {
-    'transform-origin': 'center center',
-    '& > ._flipper-back': {
-      'transform': 'rotate3d(1, 0, 0, 180deg) translateZ(1px)'
+    parent: {
+      'transform-origin': 'center center'
+    },
+    finds: {
+      '> .jqf-back': {
+        'transform': 'rotate3d(1, 0, 0, 180deg) translateZ(1px)'
+      }
     },
     flipper: {
       'transform': 'rotate3d(1, 0, 0, -180deg)'
