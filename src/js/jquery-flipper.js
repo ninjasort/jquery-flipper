@@ -30,17 +30,17 @@ $.widget('cjroe.flipper', {
    * ======================================
    * Before DOM Construction
    * -----------------------
-   * <section class="flipper-container">
+   * <section id="myFlipper">
    *   <div>Front Content</div>
    *   <div>Back Content</div>
    * </section>
    *
    * After DOM Construction
    * -----------------------
-   * <section class="flipper-container">
-   *   <div id="flipper-element">
-   *     <div class="_flipper-front">Front Content</div>
-   *     <div class="_flipper-back">Back Content</div>
+   * <section id="myFlipper">
+   *   <div class="jqf-el">
+   *     <div class="jqf-front">Front Content</div>
+   *     <div class="jqf-back">Back Content</div>
    *   </div>
    * </section>
    */
@@ -139,11 +139,6 @@ $.widget('cjroe.flipper', {
         this.selectedFlip = styles.rightSlide;
         break;
     }
-    // if ($el.hasClass(this._prefix(this.options.rotationType))) {
-    //   $el.switchClass(this._prefix(this.options.rotationType), this._prefix(v));
-    // } else {
-    //   $el.addClass(this._prefix(this.options.rotationType), this._prefix(v));
-    // }
   },
 
   _setOption(k, v) {
