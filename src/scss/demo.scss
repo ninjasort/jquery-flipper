@@ -1,76 +1,83 @@
-@import "bourbon";
-
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    padding: 100px 0;
-    line-height: 1.5;
-    color: #444;
-    background-color: #eee;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding: 100px 0;
+  line-height: 1.5;
+  color: #444;
+  background-color: #eee;
 }
+
 h1 {
-    font-weight: bold;
-    margin-bottom: 0.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
+
 h3 {
-    color: #333;
-    font-size: 1em;
+  color: #333;
+  font-size: 1em;
 }
+
 label {
   font-size: 0.8em;
   font-weight: 100;
 }
+
 input {
   color: #000;
 }
+
 p {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
+
 a {
-    display: inline-block;
-    color: #6699ff;
-    &:hover {
-        color: darken(#6699ff, 10%);
-    }
+  display: inline-block;
+  color: #6699ff;
+  &:hover {
+    color: darken(#6699ff, 10%);
+  }
 }
+
 select {
-    color: #000;
-    font-size: 13px;
+  color: #000;
+  font-size: 13px;
 }
+
 select[name="keydown"] {
-    display: none;
+  display: none;
 }
+
 .controls {
-    @media (max-width: 992px) {
-        margin-bottom: 2em;
-    }
+  @media (max-width: 992px) {
+    margin-bottom: 2em;
+  }
 }
 
 #myFlipper {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    .flipper-element {
-        background-color: #444;
-        .front .front__content {
-            *:not(img) {
-                padding: 2em 1em;
-            }
-        }
-        .back .back__content {
-            margin-top: 1.5em;
-            padding: 2em;
-            width: 100%;
-            color: #eee;
-        }
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  .jqf-el {
+    background-color: #444;
+    .jqf-front .front__content {
+      *:not(img) {
+        padding: 2em 1em;
+      }
     }
+    .jqf-front .back__content {
+      margin-top: 1.5em;
+      padding: 2em;
+      width: 100%;
+      color: #eee;
+    }
+  }
 }
 
 @media (max-width: 480px) {
-    #myFlipper {
-        width: 100%;
-        .back__content {
-            font-size: 80%;
-        }
+  #myFlipper {
+    width: 100%;
+    .back__content {
+      font-size: 80%;
     }
+  }
 }

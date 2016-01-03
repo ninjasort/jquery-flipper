@@ -1,85 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>jQuery Flipper Demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../dist/jquery.flipper.min.css">
-    <link rel="stylesheet" href="demo.css">
+  <meta charset="utf-8">
+  <title>jQuery Flipper Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="demo.css">
+  <style>
+    *[data-flipper] {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-    <a href="https://github.com/cameronjroe/jquery-flipper"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">
-                <section class="controls">
-                    <h1>jQuery Flipper</h1>
-                    <h3>CSS3 card flip effect.</h3>
-                    <hr>
-                    <div class="form-group">
-                        <label for="type-selector">Rotation Type:</label>
-                        <select name="type" id="type-selector">
-                            <option value="left" selected>left</option>
-                            <option value="right">right</option>
-                            <option value="up">up</option>
-                            <option value="down">down</option>
-                            <option value="left-slide">left-slide</option>
-                            <option value="right-slide">right-slide</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="event">Event:</label>
-                        <select name="event">
-                            <option value="hover">hover</option>
-                            <option value="click">click</option>
-                            <option value="keydown">keydown</option>
-                        </select>
-                        <select name="keydown">
-                            <option value="enter">enter</option>
-                            <option value="space">space</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="depth">Depth: (100 - 2000) <span id="depth-amount">1000</span></label>
-                        <input type="range" name="depth" value="1000" min="100" max="2000">
-                    </div>
-                    <div class="form-group">
-                        <label for="speed">Speed: 0.1 - 2.0 <span id="speed-amount">0.5</span></label>
-                        <input type="range" name="speed" min="0.1" max="2" value="0.5" step="0.1">
-                    </div>
-                </section>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1">
-                <section id="myFlipper" data-flipper>
-                    <div class="front">
-                        <section class="front__content">
-                            <img width="100%" src="http://picjumbo.com/wp-content/uploads/HNCK0129-1300x866.jpg">
-                        </section>
-                    </div>
-                    <div class="back">
-                        <section class="back__content">
-                            <p>jQuery Flipper let's you easily add a 3D card flip effect to your content.</p>
-                            <p>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/cameronjroe/jquery-flipper">Share on Facebook</a><br>
-                                <a href="https://twitter.com/home?status=Add%20a%203d%20card%20flip%20effect%20to%20your%20content.%20https://github.com/cameronjroe/jquery-flipper">Share on Twitter</a>
-                            </p>
-                            <p>
-                                Check it out on <a href="https://github.com/cameronjroe/jquery-flipper">Github</a>
-                            </p>
-                        </section>
-                    </div>
-                </section>
-            </div>
-        </div>
+  <a href="https://github.com/cameronjroe/jquery-flipper"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-1">
+        <section class="controls">
+          <h1>jQuery Flipper</h1>
+          <h3>CSS3 card flip effect.</h3>
+          <hr>
+          <div class="form-group">
+            <label for="type-selector">Rotation Type:</label>
+            <select name="type" id="type-selector">
+              <option value="left" selected>left</option>
+              <option value="right">right</option>
+              <option value="up">up</option>
+              <option value="down">down</option>
+              <option value="left-slide">left-slide</option>
+              <option value="right-slide">right-slide</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="event">Event:</label>
+            <select name="event">
+              <option value="hover">hover</option>
+              <option value="click">click</option>
+              <option value="keydown">keydown</option>
+            </select>
+            <select name="keydown">
+              <option value="enter">enter</option>
+              <option value="space">space</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="depth">Depth: (100 - 2000) <span id="depth-amount">1000</span></label>
+            <input type="range" name="depth" value="1000" min="100" max="2000">
+          </div>
+          <div class="form-group">
+            <label for="speed">Speed: 0.1 - 2.0 <span id="speed-amount">0.5</span></label>
+            <input type="range" name="speed" min="0.1" max="2" value="0.5" step="0.1">
+          </div>
+        </section>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1">
+        <section id="myFlipper" data-flipper>
+          <div class="front">
+            <section class="front__content">
+              <img width="100%" src="http://picjumbo.com/wp-content/uploads/HNCK0129-1300x866.jpg">
+            </section>
+          </div>
+          <div class="back">
+            <section class="back__content">
+              <p>jQuery Flipper let's you easily add a 3D card flip effect to your content.</p>
+              <p>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/cameronjroe/jquery-flipper">Share on Facebook</a>
+                <br>
+                <a href="https://twitter.com/home?status=Add%20a%203d%20card%20flip%20effect%20to%20your%20content.%20https://github.com/cameronjroe/jquery-flipper">Share on Twitter</a>
+              </p>
+              <p>
+                Check it out on <a href="https://github.com/cameronjroe/jquery-flipper">Github</a>
+              </p>
+            </section>
+          </div>
+        </section>
+      </div>
     </div>
-
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
-    <script src="../src/jquery.flipper.js"></script>
-    <script src="demo.js"></script>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="../dist/jquery-flipper.min.js"></script>
+  <script src="demo.js"></script>
 </body>
+
 </html>

@@ -2,19 +2,23 @@
 
 A simple way to add a CSS3 flip effect to your content.
 
-## Getting Started
-Download the [production version](https://raw.githubusercontent.com/cameronjroe/jquery-flipper/master/dist/jquery.flipper.min.js) or the [development version](https://raw.githubusercontent.com/cameronjroe/jquery-flipper/master/dist/jquery.flipper.js).
+## Installation
+
+```
+$ bower install jquery-flipper --save
+```
 
 In your web page:
+
+<!-- **FOUC NOTE** You can add a `data-flipper` attribute to your element to stop a FOUC from appearing due to style adjustments in the plugin. -->
 
 ```html
 <html>
 <head>
-  <link rel="stylesheet" href="bower_components/jquery-flipper/dist/jquery.flipper.min.css">
+  <title>jQuery Flipper</title>
 </head>
 <body>
-  <section id="myFlipper" data-flipper>
-    <!-- **FOUC NOTE** You can add a `data-flipper` attribute to your element to stop a FOUC from appearing due to style adjustments in the plugin. -->
+  <section id="myFlipper">
     <!-- There should be two elements inside the flipper -->
     <section class="front"></section>
     <section class="back"></section>
@@ -49,4 +53,6 @@ You can also pass flipper options.
 - speed [number] the speed of the rotation (0.1 - 2.0)
 
 ## Examples
+
 View the demo [here](http://cameronjroe.github.io/jquery-flipper) or in the demo directory.
+
