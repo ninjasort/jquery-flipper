@@ -38,11 +38,13 @@ export default {
   },
   right: {
     flipper: {
+      'transform-origin': 'center center',
       'transform': 'rotate3d(0, 1, 0, -180deg)'
     }
   },
   left: {
     flipper: {
+      'transform-origin': 'center center',
       'transform': 'rotate3d(0, 1, 0, 180deg)'
     }
   },

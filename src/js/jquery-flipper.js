@@ -177,6 +177,8 @@ $.widget('cjroe.flipper', {
       if (this.selectedFlip.parent) {
         $('.jqf-el').parent().css(this.selectedFlip.parent);
       }
+      // back styling
+      $('.jqf-el > .jqf-back').css(styles.back);
       // set other element styles k, v
       if (this.selectedFlip.finds) {
         for (var f in this.selectedFlip.finds) {

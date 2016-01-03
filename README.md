@@ -5,7 +5,7 @@ A simple way to add a CSS3 flip effect to your content.
 ## Installation
 
 ```
-$ bower install jquery-flipper
+$ bower install jquery-flipper --save
 ```
 
 In your web page:
@@ -15,7 +15,7 @@ In your web page:
 ```html
 <html>
 <head>
-  <link rel="stylesheet" href="bower_components/jquery-flipper/dist/jquery.flipper.min.css">
+  <title>jQuery Flipper</title>
 </head>
 <body>
   <section id="myFlipper">
@@ -53,4 +53,6 @@ You can also pass flipper options.
 - speed [number] the speed of the rotation (0.1 - 2.0)
 
 ## Examples
+
 View the demo [here](http://cameronjroe.github.io/jquery-flipper) or in the demo directory.
+
