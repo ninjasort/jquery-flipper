@@ -14,7 +14,7 @@ export default {
     ]
   },
   resolve: {
-    root: ['src'],
+    root: path.resolve(__dirname, './src'),
     extensions: ['', '.js']
   },
   externals: {
